@@ -6,7 +6,7 @@
 variable "create_vpc" {
   description = "True to create new VPC. False if VPC is already existing and subnets or address prefixies are to be added"
   type        = bool
-  default = true
+  default     = true
 }
 
 #####################################################
@@ -103,7 +103,7 @@ variable "public_gateway_name" {
 
 variable "floating_ip" {
   description = "Floating IP `id`'s or `address`'es that you want to assign to the public gateway"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 

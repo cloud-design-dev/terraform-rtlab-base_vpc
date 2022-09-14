@@ -17,9 +17,9 @@ resource "ibm_is_ssh_key" "generated_key" {
 }
 
 module "vpc" {
-  source = "./modules/vpc"
-  name = var.prefix
+  source            = "./modules/vpc"
+  name              = var.prefix
   resource_group_id = local.resource_group_id
-  locations = [data.ibm_is_zones.mzr.zones[0], data.ibm_is_zones.mzr.zones[1]]
-  tags           = local.project_tags
+  locations         = [data.ibm_is_zones.mzr.zones[0], data.ibm_is_zones.mzr.zones[1]]
+  tags              = local.project_tags
 }
